@@ -91,11 +91,12 @@
 
             computed: {
 
-                allComments() {
+                mostrarComentarios() {
 
-                    return this.chat.map(dados => {
-                        nome = dados.nome.trim() == '' ? 'Sem nome' : dados.nome
-                    })
+                    return this.chat.map(dados => ({
+                        ...dados,
+                        nome: dados.nome.trim() == '' ? 'Sem nome' : dados.nome
+                    }))
 
                 }
 
