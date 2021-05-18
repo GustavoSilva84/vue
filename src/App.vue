@@ -1,22 +1,22 @@
 <template>
   <div id="app">
 
-    <HelloWorld msg="ss"/>
-    <Teste/>
+    <HelloWorld msg="Lista"/>
+    <rr/>
 
   </div>
 </template>
 
 <script>
 
-import Teste from './components/rr.vue'
+import rr from './components/rr.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Teste
+    rr
   }
 }
 
