@@ -1,36 +1,33 @@
 <template>
+
   <div id="app">
-
-    <HelloWorld msg="Lista"/>
-    <rr/>
-
+    <Chat/>
   </div>
+
 </template>
 
 <script>
 
-import rr from './components/rr.vue'
-import HelloWorld from './components/HelloWorld.vue'
+  import Chat from './components/chat.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    rr
+  export default {
+    name: 'App',
+    components: {
+      Chat
+    }
   }
-}
 
 </script>
 
 <style>
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 
-</style>/
+</style>
