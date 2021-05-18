@@ -43,7 +43,7 @@
                     </div>
 
                     <ul>
-                        <li v-for="(dados, index) in chat">
+                        <li v-for="(dados, index) in allComments">
                             {{ dados.nome }}
                             {{ dados.comentario }}
                             <button v-on:click="deletar(index)"> Deletar </button>
@@ -70,7 +70,7 @@
 
                 adicionarComentario() {
 
-                    if(this.nome.trim() === '' || this.comentario.trim() === '') return;
+                    // if(this.nome.trim() === '' || this.comentario.trim() === '') return;
 
                     this.chat.push({
                         nome: this.nome, 
@@ -87,7 +87,20 @@
 
                 }
 
+            },
+
+            computed: {
+
+                allComments() {
+
+                    return this.chat.map(dados => {
+                        nome = dados.nome.trim() == '' ? 'Sem nome' : dados.nome
+                    })
+
+                }
+
             }
+
         })
 
     </script>
